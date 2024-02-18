@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "init": "^0.1.2",
+    "npx": "^10.2.2",
+    "vitepress": "^1.0.0-rc.43"
+  },
+  "scripts": {
+    "dev": "vitepress dev site",
+    "build": "vitepress build site",
+    "preview": "vitepress preview site"
+  }
+}

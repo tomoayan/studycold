@@ -1,25 +1,33 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "studycold"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  text: StudyCold
+  tagline: Personal Blog for Random Things
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: About Me
+      link: https://tomoayan.github.io/
     - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      text: View on GitHub
+      link: https://github.com/tomoayan/studycold
 ---
 
+<script setup>
+import { data as posts } from '.vitepress/blog.data.js'
+console.log(posts)
+</script>
+
+<div class="postList">
+<h1>All Posts</h1>
+  <ul>
+    <li v-for="post of posts">
+    <a :href="post.url">
+    <img :src="post.frontmatter.poster">
+    <div class="postBody">
+      <h3>{{ post.frontmatter.title }}</h3>
+    </div>
+    </a>
+    </li>
+  </ul>
+</div>

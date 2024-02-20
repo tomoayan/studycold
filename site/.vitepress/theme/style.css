@@ -43,7 +43,7 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
@@ -137,3 +137,59 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Custom CSS
+ * -------------------------------------------------------------------------- */
+
+.postList ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  /* border: 1px solid red; */
+}
+
+.postList a {
+  text-decoration: none;
+  color: var(--vp-button-alt-text)
+}
+
+.postList a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.postList ul li {
+  margin: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.postList img {
+  border-radius: 7px;
+  aspect-ratio: 16 / 9;
+  display: block;
+  background-color: var(--vp-c-bg-soft);
+  transition: opacity .25s;
+}
+
+.postList a:hover img {
+  opacity: .8;
+}
+
+.postBody {
+  margin: 12px 5px;
+}
+
+.postList h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-family: var(--vp-font-family-base);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 0;
+}

@@ -12,8 +12,8 @@ export default defineConfig({
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/tomoayan' },
-      { icon: 'instagram', link: 'https://github.com/tomoayan' },
-      { icon: 'twitter', link: 'https://github.com/tomoayan' }
+      { icon: 'instagram', link: 'https://instagram.com/tomoayan' },
+      { icon: 'x', link: 'https://x.com/tomoayan_' }
     ]
   }
 })
